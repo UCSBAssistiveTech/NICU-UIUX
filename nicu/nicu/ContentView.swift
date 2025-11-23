@@ -205,11 +205,15 @@ struct VitalGraphView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(title).font(.title2).foregroundColor(.white).textOutline(color: .gray, width: 1)
-            Chart(data) {
-                LineMark(x: .value("Time", $0.date), y: .value("Value", $0.value))
-                    .foregroundStyle(color)
-                    .interpolationMethod(.catmullRom)
+            Chart(Array(data.enumerated()), id: \.element.id) { index, point in
+                LineMark(
+                    x: .value("Index", index),
+                    y: .value("Value", point.value)
+                )
+                .foregroundStyle(color)
+                .interpolationMethod(.catmullRom)
             }
+            .chartXScale(domain: 0...19)
             .chartXAxis(.hidden)
             .chartYAxis(.hidden)
             .frame(height: 100)
@@ -227,14 +231,14 @@ struct SPO2HistogramView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(title).font(.title2).foregroundColor(.white).textOutline(color: .gray, width: 1)
-            Chart(data) {
-                // We use BarMark to create the histogram bars.
+            Chart(Array(data.enumerated()), id: \.element.id) { index, point in
                 BarMark(
-                    x: .value("Time", $0.date),
-                    y: .value("Value", $0.value)
+                    x: .value("Index", index),
+                    y: .value("Value", point.value)
                 )
                 .foregroundStyle(color)
             }
+            .chartXScale(domain: 0...19)
             .chartXAxis(.hidden)
             .chartYAxis(.hidden)
             .frame(height: 100)
