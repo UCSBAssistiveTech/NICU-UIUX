@@ -22,7 +22,6 @@ struct TextOutlineModifier: ViewModifier {
             content.shadow(color: color, radius: 0, x: -width, y: 0)
             content.shadow(color: color, radius: 0, x: 0, y: width)
             content.shadow(color: color, radius: 0, x: 0, y: -width)
-            // The original content is placed on top.
             content
         }
     }
@@ -32,23 +31,6 @@ struct TextOutlineModifier: ViewModifier {
 extension View {
     func textOutline(color: Color, width: CGFloat) -> some View {
         self.modifier(TextOutlineModifier(color: color, width: width))
-    }
-}
-
-
-// MARK: - Main App Structure
-// This is the entry point of the application.
-
-struct HealthPassthroughApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .windowStyle(.plain)
-
-        ImmersiveSpace(id: "HealthMetrics") {
-            HealthMetricsView()
-        }
     }
 }
 
@@ -74,57 +56,119 @@ struct ContentView: View {
     }
 }
 
-
-// MARK: - Health Metrics View
-// This view now includes graphs on the left and the stats panel on the right.
+// MARK: - Health Metrics View (TOP charts + BOTTOM vitals)
 struct HealthMetricsView: View {
-    // State variables for current vital signs
+    // Live vital state (simulated for now, will be replaced by real data)
     @State private var heartRate: Double = 75
     @State private var spo2: Double = 98
     @State private var bloodPressureSystolic: Double = 120
     @State private var bloodPressureDiastolic: Double = 80
     @State private var temperature: Double = 98.6
-    
-    // State variables to hold historical data for graphs
+
+    // Time-series data used by graphs
     @State private var heartRateHistory: [VitalDataPoint] = []
     @State private var spo2History: [VitalDataPoint] = []
-    @State private var mapHistory: [VitalDataPoint] = [] // Changed from two BP arrays to one MAP array
+    @State private var mapHistory: [VitalDataPoint] = []
 
+    // Periodically refresh simulated vitals
     let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        HStack(spacing: 300) { // Changed spacing to 400
-            // Left side: Graphs
-            VStack(spacing: 20) {
-                // Heart rate graph moved down one row
-                SPO2HistogramView(title: "SpO2 (%)", data: spo2History, color: .blue)
-                VitalGraphView(title: "Heart Rate (BPM)", data: heartRateHistory, color: .red)
-                VitalGraphView(title: "Mean Arterial Pressure (mmHg)", data: mapHistory, color: .purple)
-            }
-            .padding(30)
-            .background(.thinMaterial)
-            .cornerRadius(20)
+        GeometryReader { geo in
+            
+            // Global layout scaling and padding
+            let outerPad: CGFloat = 16
 
-            // Right side: Vitals Panel
-            VStack(spacing: 20) {
-                // Heart rate metric moved down one row
-                HealthMetricView(name: "SpO2", value: "\(Int(spo2))", unit: "%", icon: "lungs.fill", color: colorForSpO2())
-                HealthMetricView(name: "Heart Rate", value: "\(Int(heartRate))", unit: "BPM", icon: "heart.fill", color: colorForHeartRate())
-                HealthMetricView(name: "Blood Pressure", value: "\(Int(bloodPressureSystolic))/\(Int(bloodPressureDiastolic))", unit: "mmHg", icon: "waveform.path.ecg", color: colorForBloodPressure())
-                HealthMetricView(name: "Temperature", value: String(format: "%.1f", temperature), unit: "°F", icon: "thermometer", color: colorForTemperature())
+            // Top chart row spacing
+            let topBarPad: CGFloat = 14
+            let topSpacing: CGFloat = 14
+            
+            // Bottom metric row
+            let bottomBarPad: CGFloat = 8
+            let bottomSpacing: CGFloat = 12
+
+            // Dynamic row width based on screen size
+            let barW = geo.size.width - outerPad * 2
+
+            // Responsive tile widths
+            let topTileW = (barW - topBarPad * 2 - topSpacing * 2) / 3
+            let bottomTileW = (barW - bottomBarPad * 2 - bottomSpacing * 3) / 4
+
+            VStack(spacing: 0) {
+
+                // MARK: - Top Row: Charts
+                HStack(spacing: topSpacing) {
+                    SPO2HistogramView(title: "SpO2 (%)", data: spo2History, color: .blue)
+                        .frame(width: topTileW)
+
+                    VitalGraphView(title: "Heart Rate (BPM)", data: heartRateHistory, color: .red)
+                        .frame(width: topTileW)
+
+                    VitalGraphView(title: "Mean Arterial Pressure (mmHg)", data: mapHistory, color: .purple)
+                        .frame(width: topTileW)
+                }
+                .padding(topBarPad)
+                .background(.thinMaterial)
+                .cornerRadius(20)
+                .frame(width: barW)
+                .clipped()
+
+                Spacer()
+
+                // MARK: - Bottom Row: Live Metrics
+                HStack(spacing: bottomSpacing) {
+                    HealthMetricView(
+                        name: "SpO2",
+                        value: "\(Int(spo2))",
+                        unit: "%",
+                        icon: "lungs.fill",
+                        color: colorForSpO2(),
+                        cardWidth: bottomTileW
+                    )
+
+                    HealthMetricView(
+                        name: "Heart Rate",
+                        value: "\(Int(heartRate))",
+                        unit: "BPM",
+                        icon: "heart.fill",
+                        color: colorForHeartRate(),
+                        cardWidth: bottomTileW
+                    )
+
+                    HealthMetricView(
+                        name: "Blood Pressure",
+                        value: "\(Int(bloodPressureSystolic))/\(Int(bloodPressureDiastolic))",
+                        unit: "mmHg",
+                        icon: "waveform.path.ecg",
+                        color: colorForBloodPressure(),
+                        cardWidth: bottomTileW
+                    )
+
+                    HealthMetricView(
+                        name: "Temperature",
+                        value: String(format: "%.1f", temperature),
+                        unit: "°F",
+                        icon: "thermometer",
+                        color: colorForTemperature(),
+                        cardWidth: bottomTileW
+                    )
+                }
+                .frame(width: barW, alignment: .leading)
+                .padding(bottomBarPad)
+                .background(.thinMaterial)
+                .cornerRadius(20)
+                .clipped()
             }
-            .padding(30)
-            .background(.thinMaterial)
-            .cornerRadius(20)
+            .padding(.horizontal, outerPad)
+            .padding(.vertical, 2)
+            .scaleEffect(0.75)
+            .frame(width: geo.size.width, height: geo.size.height)
+            .onAppear(perform: setupInitialData)
+            .onReceive(timer) { _ in updateVitals() }
         }
-        .padding(40)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear(perform: setupInitialData)
-        .onReceive(timer) { _ in
-            updateVitals()
-        }
+        
     }
-    
+
     // MARK: - Data and Color Logic
     
     func setupInitialData() {
@@ -132,7 +176,7 @@ struct HealthMetricsView: View {
             updateVitals(isInitialSetup: true)
         }
     }
-    
+
     func colorForHeartRate() -> Color { (60...100).contains(heartRate) ? .green : .red }
     func colorForSpO2() -> Color { (95...100).contains(spo2) ? .green : .red }
     func colorForBloodPressure() -> Color {
@@ -144,11 +188,21 @@ struct HealthMetricsView: View {
 
     func updateVitals(isInitialSetup: Bool = false) {
         let updateAnimation: Animation? = isInitialSetup ? nil : .easeInOut
-        
+
         withAnimation(updateAnimation) {
             // Generate new values
-            if Int.random(in: 1...5) == 1 { heartRate = Bool.random() ? Double.random(in: 40...59) : Double.random(in: 101...140) } else { heartRate = Double.random(in: 60...100) }
-            if Int.random(in: 1...5) == 1 { spo2 = Double.random(in: 90...94) } else { spo2 = Double.random(in: 95...100) }
+            if Int.random(in: 1...5) == 1 {
+                heartRate = Bool.random() ? Double.random(in: 40...59) : Double.random(in: 101...140)
+            } else {
+                heartRate = Double.random(in: 60...100)
+            }
+
+            if Int.random(in: 1...5) == 1 {
+                spo2 = Double.random(in: 90...94)
+            } else {
+                spo2 = Double.random(in: 95...100)
+            }
+
             if Int.random(in: 1...5) == 1 {
                 bloodPressureSystolic = Bool.random() ? Double.random(in: 80...89) : Double.random(in: 121...140)
                 bloodPressureDiastolic = Bool.random() ? Double.random(in: 50...59) : Double.random(in: 81...90)
@@ -156,8 +210,12 @@ struct HealthMetricsView: View {
                 bloodPressureSystolic = Double.random(in: 90...120)
                 bloodPressureDiastolic = Double.random(in: 60...80)
             }
-            if Int.random(in: 1...5) == 1 { temperature = Bool.random() ? Double.random(in: 96.0...97.7) : Double.random(in: 99.2...100.4) } else { temperature = Double.random(in: 97.8...99.1) }
 
+            if Int.random(in: 1...5) == 1 {
+                temperature = Bool.random() ? Double.random(in: 96.0...97.7) : Double.random(in: 99.2...100.4)
+            } else {
+                temperature = Double.random(in: 97.8...99.1)
+            }
             // Calculate Mean Arterial Pressure (MAP)
             let map = bloodPressureDiastolic + (bloodPressureSystolic - bloodPressureDiastolic) / 3.0
 
@@ -166,7 +224,7 @@ struct HealthMetricsView: View {
             heartRateHistory.append(VitalDataPoint(date: now, value: heartRate))
             spo2History.append(VitalDataPoint(date: now, value: spo2))
             mapHistory.append(VitalDataPoint(date: now, value: map))
-            
+
             // Keep history to a fixed size
             if heartRateHistory.count > 20 { heartRateHistory.removeFirst() }
             if spo2History.count > 20 { spo2History.removeFirst() }
@@ -175,25 +233,51 @@ struct HealthMetricsView: View {
     }
 }
 
-
-// MARK: - Health Metric View
-// Reusable view for a single numerical health metric.
+// MARK: - Metric Card 
 struct HealthMetricView: View {
     let name: String, value: String, unit: String, icon: String, color: Color
+    var cardWidth: CGFloat = 260
+    var cardHeight: CGFloat = 90
 
     var body: some View {
-        HStack {
-            Image(systemName: icon).font(.largeTitle).foregroundColor(color).frame(width: 60)
-            VStack(alignment: .leading) {
-                Text(name).font(.title2).foregroundColor(.white).textOutline(color: .gray, width: 1)
-                Text(value).font(.system(size: 60, weight: .bold)).foregroundColor(color).contentTransition(.numericText()).textOutline(color: .gray, width: 1) // Increased font size
+        VStack(alignment: .leading, spacing: 6) {
+            Text(name)
+                .font(.headline)
+                .foregroundColor(.white)
+                .textOutline(color: .gray, width: 1)
+                .lineLimit(1)
+                .minimumScaleFactor(0.85)
+
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                // Fixed width keeps icons aligned across all cards
+                Image(systemName: icon)
+                    .font(.title2)
+                    .foregroundColor(color)
+                    .frame(width: 26)
+
+                // Monospaced digits prevent jitter when values update
+                Text(value)
+                    .font(.system(size: 48, weight: .bold)) // middle
+                    .foregroundColor(color)
+                    .monospacedDigit()
+                    .textOutline(color: .gray, width: 1)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.45)
+                    .layoutPriority(1)
+
+                // Fixed size ensures units like "mmHg" never truncate
+                Text(unit)
+                    .font(.callout)
+                    .foregroundColor(.white)
+                    .textOutline(color: .gray, width: 1)
+                    .fixedSize()
+                    .layoutPriority(2)
             }
-            Spacer()
-            Text(unit).font(.title2).foregroundColor(.white).padding(.trailing).textOutline(color: .gray, width: 1)
         }
-        .frame(width: 400, height: 100) // Changed width
+        .frame(width: cardWidth, height: cardHeight, alignment: .center)
     }
 }
+
 
 // MARK: - Graph Views
 // A reusable view for displaying a single-line vital graph.
@@ -203,8 +287,13 @@ struct VitalGraphView: View {
     let color: Color
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(title).font(.title2).foregroundColor(.white).textOutline(color: .gray, width: 1)
+        VStack(alignment: .trailing) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+                .textOutline(color: .gray, width: 1)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+
             Chart(Array(data.enumerated()), id: \.element.id) { index, point in
                 LineMark(
                     x: .value("Index", index),
@@ -216,9 +305,9 @@ struct VitalGraphView: View {
             .chartXScale(domain: 0...19)
             .chartXAxis(.hidden)
             .chartYAxis(.hidden)
-            .frame(height: 100)
+            .frame(height: 90)
         }
-        .frame(width: 400) // Changed width
+        .frame(maxWidth: .infinity)
     }
 }
 
@@ -229,8 +318,13 @@ struct SPO2HistogramView: View {
     let color: Color
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(title).font(.title2).foregroundColor(.white).textOutline(color: .gray, width: 1)
+        VStack(alignment: .trailing) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+                .textOutline(color: .gray, width: 1)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+
             Chart(Array(data.enumerated()), id: \.element.id) { index, point in
                 BarMark(
                     x: .value("Index", index),
@@ -241,9 +335,9 @@ struct SPO2HistogramView: View {
             .chartXScale(domain: 0...19)
             .chartXAxis(.hidden)
             .chartYAxis(.hidden)
-            .frame(height: 100)
+            .frame(height: 90)
         }
-        .frame(width: 400) // Changed width
+        .frame(maxWidth: .infinity)
     }
 }
 
