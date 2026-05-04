@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/primary.swiftdeps"
+  },
+  "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketIncoming.swift": {
+    "dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.d",
+    "object": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.swift.o",
+    "swiftmodule": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming~partial.swiftmodule",
+    "swift-dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.swiftdeps",
+    "diagnostics": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.dia"
+  },
+  "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketReceiver.swift": {
+    "dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.d",
+    "object": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.swift.o",
+    "swiftmodule": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver~partial.swiftmodule",
+    "swift-dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.swiftdeps",
+    "diagnostics": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.dia"
+  }
+}

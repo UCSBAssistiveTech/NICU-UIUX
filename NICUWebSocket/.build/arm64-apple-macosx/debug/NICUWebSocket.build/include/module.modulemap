@@ -1,0 +1,3 @@
+module NICUWebSocket {
+    header "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/include/NICUWebSocket-Swift.h"
+}

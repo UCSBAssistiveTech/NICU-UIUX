@@ -1,0 +1,3 @@
+module NICUWebSocketPackageTests {
+    header "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/include/NICUWebSocketPackageTests-Swift.h"
+}

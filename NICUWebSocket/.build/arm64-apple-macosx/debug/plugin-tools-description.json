@@ -1,0 +1,621 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.xctest/Contents/MacOS/NICUWebSocketPackageTests",
+      "packagePath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket",
+      "productName" : "NICUWebSocketPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.NICUWebSocket-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/sources",
+      "importPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketIncoming.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketReceiver.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "NICUWebSocket",
+      "moduleOutputPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocket.swiftmodule",
+      "objects" : [
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.swift.o",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/include/NICUWebSocket-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nicuwebsocket"
+      ],
+      "outputFileMapPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocket.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketIncoming.swift",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketReceiver.swift"
+      ],
+      "tempsPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.NICUWebSocketPackageTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/sources",
+      "importPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocketTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "NICUWebSocketPackageTests",
+      "moduleOutputPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocketPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/include/NICUWebSocketPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nicuwebsocket"
+      ],
+      "outputFileMapPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocketPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.NICUWebSocketTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/sources",
+      "importPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Tests/NICUWebSocketTests/NICUWebSocketTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocket.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "NICUWebSocketTests",
+      "moduleOutputPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocketTests.swiftmodule",
+      "objects" : [
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nicuwebsocket"
+      ],
+      "outputFileMapPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules/NICUWebSocketTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Tests/NICUWebSocketTests/NICUWebSocketTests.swift"
+      ],
+      "tempsPath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "NICUWebSocket" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "NICUWebSocket",
+      "-package-name",
+      "nicuwebsocket",
+      "-c",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketIncoming.swift",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketReceiver.swift",
+      "-I",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/include/NICUWebSocket-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nicuwebsocket",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "NICUWebSocketPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "NICUWebSocketPackageTests",
+      "-package-name",
+      "nicuwebsocket",
+      "-c",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/include/NICUWebSocketPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nicuwebsocket",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "NICUWebSocketTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "NICUWebSocketTests",
+      "-package-name",
+      "nicuwebsocket",
+      "-c",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Tests/NICUWebSocketTests/NICUWebSocketTests.swift",
+      "-I",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nicuwebsocket",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "NICUWebSocket" : [
+
+    ],
+    "NICUWebSocketPackageTests" : [
+      "NICUWebSocketTests",
+      "NICUWebSocket"
+    ],
+    "NICUWebSocketTests" : [
+      "NICUWebSocket"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketIncoming.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Sources/NICUWebSocket/WebSocketReceiver.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/sources"
+    },
+    "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/sources"
+    },
+    "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketIncoming.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocket.build/WebSocketReceiver.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Tests/NICUWebSocketTests/NICUWebSocketTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/sources"
+    },
+    "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

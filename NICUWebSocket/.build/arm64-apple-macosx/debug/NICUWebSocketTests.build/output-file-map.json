@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/primary.swiftdeps"
+  },
+  "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/Tests/NICUWebSocketTests/NICUWebSocketTests.swift": {
+    "dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.d",
+    "object": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.swift.o",
+    "swiftmodule": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.swiftdeps",
+    "diagnostics": "/Users/ajv/Developer/NICU-UIUX/NICUWebSocket/.build/arm64-apple-macosx/debug/NICUWebSocketTests.build/NICUWebSocketTests.dia"
+  }
+}
